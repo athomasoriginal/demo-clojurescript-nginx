@@ -2,3 +2,6 @@
 .cpcache
 out
 target
+
+# docker
+temp
