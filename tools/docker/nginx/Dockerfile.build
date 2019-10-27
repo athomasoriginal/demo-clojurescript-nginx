@@ -1,0 +1,14 @@
+# base image
+FROM clojure:openjdk-11-tools-deps-slim-buster
+
+# create dir for our app to live in
+WORKDIR /app
+
+# copy the app from our local filesystem to the docker container app dir
+COPY . /app
+
+# build our prod clojurescript artifact
+RUN clojure -A:prod
+
+# The end.  No need for a CMD to be specified because this is a build
+# docker container
