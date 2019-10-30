@@ -29,7 +29,7 @@ This will show the steps involved in building the docker nginx webserver locally
   ```bash
   docker build -t \
                demo-clojurescript-nginx/build:0.0.0 \
-               -f "tools/docker/nginx/Dockerfile.build" .
+               -f "tools/nginx/Dockerfile.build" .
   ```
 
 - Run prod artifact container
@@ -56,7 +56,7 @@ This will show the steps involved in building the docker nginx webserver locally
   ```bash
   docker build -t \
              demo-clojurescript-nginx/prod:0.0.0 \
-             -f "tools/docker/nginx/Dockerfile" .
+             -f "tools/nginx/Dockerfile" .
   ```
 
 - Run prod nginx container
